@@ -1,0 +1,26 @@
+# .NET Core
+bin/
+obj/
+
+# ASP.NET Core
+wwwroot/
+
+# User-specific files
+.vs/
+.idea/
+
+# Visual Studio for Mac
+.vscode/
+
+# Windows image file caches
+Thumbs.db
+ehthumbs.db
+
+# Windows Installer files
+*.cab
+*.msi
+*.msm
+*.msp
+
+# ASP.NET temporary files
+app_data/
