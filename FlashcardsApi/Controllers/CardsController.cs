@@ -36,6 +36,19 @@ namespace FlashcardsApi.Controllers
             return card;
         }
 
+        [HttpGet("Deck/{deck}")]
+        public async Task<ActionResult<IEnumerable<Card>>> GetCardsByDeck(string deck)
+        {
+            var cards = await _context.Cards.Where(c => c.Deck == deck).ToListAsync();
+
+            if (cards == null)
+            {
+                return NotFound();
+            }
+
+            return cards;
+        }
+
         [HttpPost]
         public async Task<ActionResult<Card>> PostCard(Card card)
         {
